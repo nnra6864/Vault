@@ -4,11 +4,13 @@ jobs:
   notify:
     runs-on: alpine
     steps:
-      - name: Trigger Quartz Build
-      - run: apk add --no-cache curl
-      - run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.TOKEN }}" \
-            -H "Accept: application/json" \
-            "https://git.nnstdios.xyz/api/v1/repos/nnra6864/quartz-Vault/dispatch" \
-            -d '{"event_type": "notes_updated"}'
+      - name: Install deps
+        run: apk add --no-cache curl
+
+      - name: Trigger build
+        run: >-
+          curl -X POST
+          -H "Authorization: token ${{ secrets.TOKEN }}"
+          -H "Accept: application/json"
+          "https://git.nnstdios.xyz/api/v1/repos/nnra6864/quartz-Vault/dispatch"
+          -d '{"event_type": "notes_updated"}'
