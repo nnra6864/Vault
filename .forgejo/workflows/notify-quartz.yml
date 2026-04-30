@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Trigger Quartz Build
       - run: apk add --no-cache curl
-        run: |
+      - run: |
           curl -X POST \
             -H "Authorization: token ${{ secrets.TOKEN }}" \
             -H "Accept: application/json" \
