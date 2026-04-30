@@ -5,6 +5,7 @@ jobs:
     runs-on: build-alpine
     steps:
       - name: Trigger Quartz Build
+      - run: apk add --no-cache curl
         run: |
           curl -X POST \
             -H "Authorization: token ${{ secrets.TOKEN }}" \
