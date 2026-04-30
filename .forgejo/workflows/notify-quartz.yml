@@ -12,5 +12,5 @@ jobs:
           curl -X POST
           -H "Authorization: token ${{ secrets.TOKEN }}"
           -H "Accept: application/json"
-          "https://git.nnstdios.xyz/api/v1/repos/nnra6864/quartz-Vault/dispatch"
+          http://forgejo:3000/api/v1/repos/nnra6864/quartz-Vault/dispatches
           -d '{"event_type": "notes_updated"}'
