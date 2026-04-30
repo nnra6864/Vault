@@ -9,7 +9,7 @@ jobs:
 
       - name: Trigger build
         run: >-
-          curl -X POST "http://localhost:3000/api/v1/repos/nnra6864/quartz-Vault/actions/workflows/build.yml/dispatches"
+          curl -X POST "http://forgejo:3000/api/v1/repos/nnra6864/quartz-Vault/actions/workflows/build.yml/dispatches"
           -H "Authorization: token ${{ secrets.TOKEN }}"
           -H "Content-Type: application/json"
           -d '{ "ref": "v4", "inputs": {} }'
