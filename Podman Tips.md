@@ -23,6 +23,13 @@ podman compose down
 podmancompose up -d --build --no-cache
 ```
 
+## Host Network
+
+To access the host network, use:
+```
+host.containers.internal
+```
+
 ## Podman Socket
 
 This service allows for behavior similar to docker in docker.
