@@ -41,8 +41,8 @@ sudo pacman -S pipewire pipewire-pulse wireplumber
 		    }
 		]' | tee ~/.config/pipewire/pipewire-pulse.conf.d/network.conf > /dev/null
 		```
-		> NOTE
-		> You can add as many IPs as you want, just separate them with `;`
+		> [!NOTE]
+		> You can add as many IPs as you want, just separate them with `;`.
 
 2. Restart the pipewire service
 	```sh
@@ -55,7 +55,7 @@ sudo pacman -S pipewire pipewire-pulse wireplumber
 	```sh
 	pactl load-module module-tunnel-sink server=server-ip
 	```
-	> NOTE
+	> [!NOTE]
 	> Make sure to replace `server-ip` with your actual server ip
 
 2. If that worked, you can create a `share-audio.sh` script in one of your binary paths
@@ -89,8 +89,10 @@ sudo pacman -S pipewire pipewire-pulse wireplumber
 	    fi
 	fi   
 	```
-	> NOTE
+	> 
+	> [!NOTE]
 	> Binary path is just a path in which your system looks for binaries.
+	> 
 	> For example, you can easily add such a path to the fish shell by adding the following to your fish config:
 	> ```fish
 	> fish_add_path ~/.config/fish/scripts
@@ -105,7 +107,7 @@ sudo pacman -S pipewire pipewire-pulse wireplumber
 	share-audio.sh server-ip
 	```
 	> NOTE
-	> Make sure to replace `server-ip` with your actual server ip
+	> Make sure to replace `server-ip` with your actual server ip.
 
 5. If everything works, it should look similar to this
 	```
