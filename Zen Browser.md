@@ -23,3 +23,11 @@ This page is hidden by default, but allows you to change the default home page e
 about:preferences#home
 ```
 
+## Missing Settings
+
+By default, Zen hides some settings, such as search engine management.
+To access these, you must set:
+```
+browser.settings-redesign.enabled
+```
+to `false`, and you should be able to access those settings as usual.
