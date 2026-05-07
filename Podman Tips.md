@@ -55,7 +55,7 @@ podman start $(podman ps -a -q)
 
 In order to be able to edit config files etc. that you mounted with `:U` flag, you can use the following option:
 ```yml
-userns: keep-id
+userns_mode: keep-id
 ```
 It preserves your UID in the container so you have the full access to mounted files etc.
 
