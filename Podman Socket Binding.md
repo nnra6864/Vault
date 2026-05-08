@@ -6,8 +6,8 @@ tags:
   - tip
   - container
   - podman
-  - server
-  - hosting
+  - dev/server
+  - dev/hosting
 aliases:
   - PINP
   - Podman In Podman

@@ -5,7 +5,7 @@ tags:
   - tip
   - container
   - podman
-  - hosting
+  - dev/hosting
 aliases:
 ---
 ## Updating

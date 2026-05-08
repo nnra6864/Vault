@@ -4,7 +4,7 @@ tags:
   - note
   - podman
   - docker
-  - server
+  - dev/server
   - linux
   - container
   - guide

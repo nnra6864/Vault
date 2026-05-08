@@ -3,8 +3,8 @@ created: 2026-05-07 19:17
 tags:
   - note
   - tip
-  - server
-  - hosting
+  - dev/server
+  - dev/hosting
   - ai
 aliases:
 ---
