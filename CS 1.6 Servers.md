@@ -2,7 +2,7 @@
 created: 2026-01-02 08:59:23
 tags:
   - note
-  - cs
+  - game/cs
   - game
 ---
 ## NnCompetitive

@@ -3,7 +3,7 @@ created: 2025-12-12 05:24:17
 tags:
   - note
   - config
-  - cs
+  - game/cs
   - game
 ---
 
