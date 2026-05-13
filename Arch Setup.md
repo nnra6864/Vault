@@ -172,3 +172,8 @@ It's great if no other repo has the bin version of the package you need.
     ```sh
     sudo ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
     ```
+
+## Nvidia
+
+In case you have an [[Nvidia]] [[GPU]], you might be able to squeeze out some extra performance.
+Check out [[Increase Default Power Limit for Nvidia GPUs]].
