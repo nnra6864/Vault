@@ -9,6 +9,9 @@ tags:
   - config
 aliases:
 ---
+
+## Environment Variables and Paths
+
 By default, [[Flatpak]] doesn't have permissions to access your config directories and environment variables for security reasons.
 To make it work, you'll have to give it readonly permissions for specific dirs, and pass some system env vars.
 Following should cover most, if not all of them:
@@ -26,7 +29,7 @@ flatpak override --user \
     --env=QT_SCALE_FACTOR=$QT_SCALE_FACTOR \
     --env=QT_WAYLAND_DISABLE_WINDOWDECORATION=$QT_WAYLAND_DISABLE_WINDOWDECORATION \
     --env=CLUTTER_BACKEND=$CLUTTER_BACKEND \
-    --env=ELECTRON_OZONE_PLATFORM_HINT=$ELECTRON_OZONE_PLATFORM_HINT
+    --env=ELECTRON_OZONE_PLATFORM_HINT=$ELECTRON_OZONE_PLATFORM_HINT;
 
 flatpak override --user \
     --filesystem=xdg-data/themes:ro \
