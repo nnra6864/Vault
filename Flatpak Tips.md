@@ -9,7 +9,6 @@ tags:
   - config
 aliases:
 ---
-
 ## Environment Variables and Paths
 
 By default, [[Flatpak]] doesn't have permissions to access your config directories and environment variables for security reasons.
@@ -46,6 +45,12 @@ flatpak override --user \
 
 > [!WARNING]
 > Make sure your host actually sets these environment variables.
+
+> [!NOTE]
+> If you set these env vars via hyprland, make sure to execute the following once on startup after settings them so they actually exist in your session:
+> ```sh
+> dbus-update-activation-environment --systemd --all
+> ```
 
 > [!WARNING]
 > Passed environment variables are evaluated at the time of running the command, they won't be dynamically updated.
