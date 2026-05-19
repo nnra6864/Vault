@@ -12,7 +12,7 @@ aliases:
 [ANINA](https://crql.works/anina/) - Free spectral resonance suppression
 [LOCD](https://crql.works/locd/) - Phase-Locked distortion for MEGA crunchiness
 
-### [plugdata](https://plugdata.org/) - ## A visual programming environment for audio experimentation, prototyping and education
+### [plugdata](https://plugdata.org/) - A visual programming environment for audio experimentation, prototyping and education
 
 [Evan Bristow](https://ewanbristow.gumroad.com/)
 ### [Hvoya Audio](https://hvoya.audio/products/)
@@ -27,9 +27,14 @@ aliases:
 
 ### [Gumroad](https://gumroad.com/)
 
-[Sigma Engine](https://vesselaud.gumroad.com/l/freesigmaenginevst) - The Ultimate Hybrid Workstation for Modern Producers
+[Sigma Engine](https://vesselaud.gumroad.com/l/freesigmaenginevst) - The Ultimate Hybrid Workstation for Modern Producers.
 [Aqua Node](https://aquanode.gumroad.com/) - Music and Sound Design Hobbyist combining aquatic soundscapes with music genres like Dub Techno and Intelligent Drum and Bass.
 [TugMoveEffect](https://tugrulakyuz.gumroad.com/l/ixzwq) - VST3 audio fx plugin that brings 2D positioning to audio effects processing.
 
-# Gianni Chiarello
-[Gianni Chiarello](https://giannichiarello.com/product/nice-stomps-plugins/) - Lots of useful free plugins emulating real world hardware
+### Gianni Chiarello
+
+[Gianni Chiarello](https://giannichiarello.com/product/nice-stomps-plugins/) - Lots of useful free plugins emulating real world hardware.
+
+### [ebbandflow](https://ebbandflow.audio/)
+
+[deFORM](https://ebbandflow.audio/products/deform) - A new synth virtual instrument built to shape sanity out of chaos.
