@@ -135,6 +135,7 @@ To generate the documentation from comments, run the following:
 ```sh
 zig test -femit-docs main.zig
 ```
+
 ### Normal
 
 Normal comments always start with `//` and are always ignored.
