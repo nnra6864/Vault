@@ -121,3 +121,31 @@ Think of a bullet in a game, 10 could spawn and despawn at different times, so u
 
 If you are writing a super minimal app that you know won't exceed the pre-defined memory usage, you might want to consider using a Fixed Buffer.
 It's great for embedded software use cases, such as on micro controllers, appliances etc., as it doesn't come with the cost of constantly allocating and de-allocating memory.
+
+## Comments
+
+Zig has 3 types of comments:
+- [[#Comments#Normal|Normal]]
+- [[#Comments#Doc|Doc]]
+- [[#Comments#Top-Level Doc|Top-Level Doc]]
+
+It supports only single line comments to allow for each line of code to be tokenized individually.
+
+To generate the documentation from comments, run the following:
+```sh
+zig test -femit-docs main.zig
+```
+### Normal
+
+Normal comments always start with `//` and are always ignored.
+
+### Doc
+
+Doc comment is used to document whatever follows it, and it always starts with exactly `///`.
+If it's used in an invalid way, it will result in a compile error.
+For example, you must not place them at the end of the file, in the middle of an expression, or above a non doc comment.
+
+### Top-Level Doc
+
+Top-Level Doc comments are used to document the current module, and always starts with `//!`.
+It's a compile error if it's not placed at the start of a container, before any expressions.
