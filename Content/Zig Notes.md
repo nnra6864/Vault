@@ -133,7 +133,7 @@ It supports only single line comments to allow for each line of code to be token
 
 To generate the documentation from comments, run the following:
 ```sh
-zig test -femit-docs=./docs -fno-emit-bin src/main.zig
+zig test -femit-docs main.zig
 ```
 
 ### Normal
