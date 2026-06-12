@@ -62,6 +62,14 @@ You should follow the IW guide if you are in the [[Arch]] iso.
 5. Set `ParallelDownloads` to 3-10, 3 being a slow laptop and 10 being a good mid-high end pc
 6. Uncomment `multilib`
 
+> [!WARNING]
+> There have been many exploits utilizing [[NPM]], it's highly recommended to sandbox any apps requiring npm using [[Flatpak]].
+> To prevent any package from silently installing npm or similar, add the following to your pacman config:
+> ```toml
+> IgnorePkg = npm pnpm bun yarn
+> ```
+> Always read [[PKGBUILD]] when installing/updating packages.
+
 ### paru
 
 1. Edit the [[paru]] config
