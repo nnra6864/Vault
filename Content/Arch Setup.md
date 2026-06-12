@@ -66,6 +66,7 @@ You should follow the IW guide if you are in the [[Arch]] iso.
 > There have been many exploits utilizing [[NPM]], it's highly recommended to sandbox any apps requiring npm using [[Flatpak]].
 > To prevent any package from silently installing npm or similar, add the following to your pacman config:
 > ```toml
+> # Avoid NPM exploits
 > IgnorePkg = npm pnpm bun yarn
 > ```
 > Always read [[PKGBUILD]] when installing/updating packages.
