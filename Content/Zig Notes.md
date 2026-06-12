@@ -228,4 +228,4 @@ Whilst they might seem like the same thing if you are coming from a higher level
 **Null** is an intentional, valid state of an optional variable and can be used in if checks etc.
 **Undefined** literally leaves the variable undefined, meaning that garbage memory is left in place of its value.
 This is useful for when you want to declare a variable, and then immediately assign it a different value, e.g. assigning a text buffer.
-It skips initialization and saves time and performance.
+It skips initialization and saves [[CPU]] cycles and time.
