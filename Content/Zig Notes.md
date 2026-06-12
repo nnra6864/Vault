@@ -170,6 +170,54 @@ const p: Point = .{ .x = 10, .y = 20 };
 
 ## Builtin Functions
 
-Zig has a powerful set of builtin functions that can be accessed with the `@` operator.
+[[Zig]] has a powerful set of builtin functions that can be accessed with the `@` operator.
 The reason they differ from standard functions or libraries is that they must be built into the compiler in order to be able to operate on types, not just values.
 A great example is `@TypeOf` that takes a value and returns the type.
+
+## Error Union
+
+Error union is a powerful feature of [[Zig]] that allows you have a variable that can hold either a value or an error.
+For example, you could define an error int union:
+```zig
+var number_or_error: ExampleErrorSet!i32 = ExampleErrorSet.ExampleErrorVariant;
+```
+
+Then print the actual type and value:
+```zig
+// Type will be ExampleErrorSet!i32, value will be ExampleErrorSet.ExampleErrorVariant
+print("\nerror union 1\ntype: {}\nvalue: {!}\n", .{
+	@TypeOf(number_or_error),
+	number_or_error,
+});
+
+// Assign an actual int value
+number_or_error = 1234;
+
+// Type will be ExampleErrorSet!i32, value will be 1234
+print("\nerror union 2\ntype: {}\nvalue: {!}\n", .{
+	@TypeOf(number_or_error), number_or_error,
+});
+
+// Unwrap the inner type
+const full_type = @TypeOf(number_or_error);
+const inner_type = @typeInfo(full_type).error_union.payload;
+
+// Type will be i32, value will be 1234
+print("\nerror union 3\ntype: {}\nvalue: {!}\n", .{
+	inner_type, number_or_error,
+});
+```
+
+Or assign the int or some default value to another variable:
+```zig
+var actual_number = number_or_error catch 0;
+```
+
+Or use conditional access:
+```zig
+if (number_or_error) |value| {
+    print("Success! Number is: {}\n", .{value});
+} else |err| {
+    print("Failed with error: {}\n", .{err});
+}
+```
