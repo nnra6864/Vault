@@ -167,3 +167,9 @@ Dot operator allows you to just do the following:
 const Point = struct { x: i32, y: i32 };
 const p: Point = .{ .x = 10, .y = 20 };
 ```
+
+## Builtin Functions
+
+Zig has a powerful set of builtin functions that can be accessed with the `@` operator.
+The reason they differ from standard functions or libraries is that they must be built into the compiler in order to be able to operate on types, not just values.
+A great example is `@TypeOf` that takes a value and returns the type.
