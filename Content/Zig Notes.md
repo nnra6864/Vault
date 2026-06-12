@@ -184,7 +184,7 @@ var number_or_error: ExampleErrorSet!i32 = ExampleErrorSet.ExampleErrorVariant;
 
 Then print the actual type and value:
 ```zig
-// Type will be ExampleErrorSet!i32, value will be ExampleErrorSet.ExampleErrorVariant
+// Type will be error{ExampleErrorVariant}!i32, value will be error.ExampleErrorVariant
 print("\nerror union 1\ntype: {}\nvalue: {!}\n", .{
 	@TypeOf(number_or_error),
 	number_or_error,
@@ -193,7 +193,7 @@ print("\nerror union 1\ntype: {}\nvalue: {!}\n", .{
 // Assign an actual int value
 number_or_error = 1234;
 
-// Type will be ExampleErrorSet!i32, value will be 1234
+// Type will be error{ExampleErrorVariant}!i32, value will be 1234
 print("\nerror union 2\ntype: {}\nvalue: {!}\n", .{
 	@TypeOf(number_or_error), number_or_error,
 });
@@ -221,3 +221,11 @@ if (number_or_error) |value| {
     print("Failed with error: {}\n", .{err});
 }
 ```
+
+## Null vs Undefined
+
+Whilst they might seem like the same thing if you are coming from a higher level language, use cases completely differ.
+**Null** is an intentional, valid state of an optional variable and can be used in if checks etc.
+**Undefined** literally leaves the variable undefined, meaning that garbage memory is left in place of its value.
+This is useful for when you want to declare a variable, and then immediately assign it a different value, e.g. assigning a text buffer.
+It skips initialization and saves time and performance.
