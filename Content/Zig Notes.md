@@ -150,3 +150,20 @@ For example, you must not place them at the end of the file, in the middle of an
 
 Top-Level Doc comments are used to document the current module, and always starts with `//!`.
 It's a compile error if it's not placed at the start of a container, before any expressions.
+
+## Result Type Literal
+
+If you ever looked at [[Zig]] code, you probably noticed a lot of `.` operators.
+Those are called Result Type Literals, or commonly referred to as Anonymous Enum/Struct Literals.
+Dot operator saves you from explicitly writing the type when it's already known by the compiler.
+
+For example, if you are declaring a struct that's of type Point, you'd have to do the following:
+```zig
+const Point = struct { x: i32, y: i32 };
+const p: Point = Point { .x = 10, .y = 20 };
+```
+Dot operator allows you to just do the following:
+```zig
+const Point = struct { x: i32, y: i32 };
+const p: Point = .{ .x = 10, .y = 20 };
+```
