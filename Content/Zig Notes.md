@@ -229,3 +229,46 @@ Whilst they might seem like the same thing if you are coming from a higher level
 **Undefined** literally leaves the variable undefined, meaning that garbage memory is left in place of its value.
 This is useful for when you want to declare a variable, and then immediately assign it a different value, e.g. assigning a text buffer.
 It skips initialization and saves [[CPU]] cycles and time.
+
+## Defer
+
+[[Zig]]'s `defer` keyword ensures the execution will happen at the end of the current code block.
+This is quite powerful as you can write memory allocation and de-allocation in the same place, using `defer` on lines that have to do with de-allocation.
+For example:
+```zig
+const std = @import("std");
+
+pub fn main(init: std.process.Init) !void {
+	// Allocate the memory and defer de-allocation
+    const args = try init.minimal.args.toSlice(init.gpa);
+    defer init.gpa.free(args);
+
+    if (args.len > 1) {
+        for (args[1..], 0..) |a, i| {
+            std.log.info("Argument {d} is {s}", .{i, a});
+        }
+    }
+} // Memory gets de-allocated here
+```
+
+If you need the memory to be available only during the execution of a small chunk of code in the function, you could wrap that chunk in `{ }`, for example:
+```zig
+const std = @import("std");
+
+pub fn main(init: std.process.Init) !void {
+	{
+		// Allocate the memory and defer de-allocation
+	    const args = try init.minimal.args.toSlice(init.gpa);
+	    defer init.gpa.free(args);
+	
+	    if (args.len > 1) {
+	        for (args[1..], 0..) |a, i| {
+	            std.log.info("Argument {d} is {s}", .{i, a});
+	        }
+	    }
+	} // Memory gets de-allocated here
+}
+```
+```zig
+
+```
