@@ -269,6 +269,67 @@ pub fn main(init: std.process.Init) !void {
 	} // Memory gets de-allocated here
 }
 ```
-```zig
 
+## Threading
+
+Using threads is a powerful way to run blocking functions alongside the rest of your program.
+[[Zig]] makes it easy withe the builtin [std.Thread](https://ziglang.org/documentation/0.16.0/std/#std.Thread) library.
+
+Here's a simple example utilizing threads and an atomic bool as a [[Cancellation Token]]:
+```zig
+const std = @import("std");
+
+pub const Animator = struct {
+    // Atomic boolean to signal the active thread to stop
+    cancel_flag: std.atomic.Value(bool),
+    // Handle to the currently running thread
+    thread: ?std.Thread,
+
+    /// Initializes the animator
+    pub fn init() Animator {
+        return .{
+            .cancel_flag = std.atomic.Value(bool).init(false),
+            .thread = null,
+        };
+    }
+
+    /// Spawns a new animation thread, safely stopping an existing one first
+    pub fn startAnimation(self: *Animator) !void {
+        // Stop and join the animation thread if running
+        self.stop();
+
+        // Reset the cancellation token value
+        self.cancel_flag.store(false, .monotonic);
+
+        // Spawn the new thread running the animation loop
+        self.thread = try std.Thread.spawn(.{}, animationLoop, .{self});
+    }
+
+    /// Sends the cancellation request if the animation thread is running
+    pub fn stop(self: *Animator) void {
+        if (self.thread) |t| {
+            // Request the cancellation
+            self.cancel_flag.store(true, .monotonic);
+
+            // Wait for the thread to cleanly exit and clean up resources
+            t.join();
+            self.thread = null;
+        }
+    }
+
+    /// Actual animation loop
+    fn animationLoop(self: *Animator) void {
+        while (true) {
+            // Check if there is a cancellation request
+            if (self.cancel_flag.load(.monotonic)) {
+                break;
+            }
+
+			// Animation code
+
+            // Sleep for 16ms to simulate 60fps
+            std.time.sleep(16 * std.time.ns_per_ms);
+        }
+    }
+};
 ```
