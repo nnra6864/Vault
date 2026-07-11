@@ -47,7 +47,7 @@ You should follow the IW guide if you are in the [[Arch]] iso.
 	```
 3. Replace [[bash]] with [[fish]]
 	```sh
-	sudo pacman -S fish && echo '[ -x /bin/fish ] && SHELL=/bin/fish exec fish' >> ~/.bashrc && source ~/.bashrc
+	sudo pacman -S fish && chsh -s $(command -v fish)
 	```
 
 ### pacman
