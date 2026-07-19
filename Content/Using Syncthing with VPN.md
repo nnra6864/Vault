@@ -15,7 +15,8 @@ This guide assumes you have Syncthing and Netbird already up and running(shouldn
 2. Either edit an existing device, or add a new one.
 3. Go to the Advanced tab.
 4. In the address field, replace `dynamic` with `tcp://device-vpn-ip:22000`.
-5. Repeat on and for all devices.
+5. Disable `Local Discovery` and `Global Discovery` under `Settings` -> `Connection`.
+6. Repeat on and for all devices.
 
 ## Access the Web UI over VPN/LAN
 
