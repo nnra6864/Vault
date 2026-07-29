@@ -18,14 +18,14 @@ In order to explain it better, lets use a [[Blender]] [[Geometry Nodes]] example
 The goal is to animate the Z offset of the noise texture from 0 to 25.
 
 1. Add a `Noise Texture` node and animate its Z offset from 0(first frame) to 25(last frame+1).
-   [[Looping_Noise_Texture_1.jxl]]
+   ![[Looping_Noise_Texture_1.jxl]]
 2. Duplicate these nodes, and animate the Z offset from -25(first frame) to 0(last frame+1).
-   [[Looping_Noise_Texture_2.jxl]]
+   ![[Looping_Noise_Texture_2.jxl]]
 3. Use the `Mix` node to combine the noise `Factor` outputs, and animate the mix `Factor` from 0(first frame) to 1(last frame+1).
-   [[Looping_Noise_Texture_3.jxl]]
+   ![[Looping_Noise_Texture_3.jxl]]
 4. Open the `Graph Editor`.
-   [[Looping_Noise_Texture_4.jxl]]
+   ![[Looping_Noise_Texture_4.jxl]]
 5. Select all the geometry nodes, then select all the keyframes, and set their `Interpolation Mode` to `Linear`.
-   [[Looping_Noise_Texture_5.jxl]]
+   ![[Looping_Noise_Texture_5.jxl]]
 
 This setup ensures a seamless, infinite loop.
