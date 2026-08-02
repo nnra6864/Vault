@@ -11,7 +11,7 @@ A great example would be upgrading to the new [[API]] by replacing all instances
 
 1. Open [[Telescope]] in [[grep]] mode.
 2. Search for `CFramebuffer`.
-3. Press `CTRL`+`q` to add results to the Quickfix List
+3. Press `CTRL`+`q` to add results to the Quickfix List.
 4. Press `:` and execute `:cfdo %s/CFramebuffer/SP<Render::IFramebuffer>/g | update`.
 
    > [!NOTE]
