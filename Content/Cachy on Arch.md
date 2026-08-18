@@ -21,15 +21,11 @@ rm -rf cachyos-repo
 ## Kernel
 
 1. Install the kernel of your choice
-	1. Performance
-		```sh
-		sudo pacman -Sy linux-cachyos-bore linux-cachyos-bore-headers
-		```
-	2. Power Saving(use `scx_bpfland` scheduler)
+	1. Daily driver
 		```sh
 		sudo pacman -Sy linux-cachyos linux-cachyos-headers
 		```
-	3. Server
+	2. Server
 		```sh
 		sudo pacman -Sy linux-cachyos-server linux-cachyos-server-headers
 		```
@@ -39,7 +35,9 @@ rm -rf cachyos-repo
 	```
 	
 [Source](https://wiki.cachyos.org/features/kernel/)
+
 ## Secure Boot
+
 1. Install `sbctl` and `cachyos-settings`
 	```sh
 	sudo pacman -Sy sbctl cachyos-settings
@@ -86,26 +84,33 @@ sudo pacman -Sy cachyos-gaming-meta cachyos-gaming-applications
 ```
 
 ([Source](https://wiki.cachyos.org/configuration/gaming/#essential-packages))
+
 ### [[Proton]] 
 
 #### Standard
+
 ```sh
 sudo pacman -Sy proton-cachyos
 ```
+
 > [note]
 > Better in most cases as it has much faster startup and performance
 
 #### Steam Linux Runtime
+
 ```sh
 sudo pacman -Sy proton-cachyos-slr
 ```
+
 > [note]
 > Good for compatibility on weird systems that might be missing libraries etc.
 
 #### GE
+
 ```sh
 paru -Sy proton-ge-custom-bin
 ```
+
 > [note]
 > Used for compatibility with older games
 
