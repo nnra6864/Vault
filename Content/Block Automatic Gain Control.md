@@ -42,3 +42,9 @@ Make sure to restart the services for changes to apply:
 ```sh
 systemctl --user restart pipewire pipewire-pulse
 ```
+
+Thanks [[Wim Tayams]] for pointing me in the right direction.
+> [Wim Taymans](https://matrix.to/#/@wtay:matrix.org)
+> [nnra](https://matrix.to/#/@nnra:matrix.org): block source volume with a pulseaudio quirk can help: https://docs.pipewire.org/page_module_protocol_pulse.html
+
+https://matrix.to/#/!kySKEYzDwVhedDCSoX:matrix.org/$KVqVUSczfV3Q6tKVOFcYd9BrWt0S1sn9IcoUUOyDJTA?via=matrix.org&via=tchncs.de&via=mozilla.org
