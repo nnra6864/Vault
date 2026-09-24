@@ -21,4 +21,6 @@ REVOKE ALL ON DATABASE postgres FROM PUBLIC;
 > [!NOTE]
 > Make sure to replace `postgres` with the actual default db name your server uses.
 > `template1` refers to the template db used when creating all the new dbs.
-> If you previously created dbs, you must run the same command for them.
+
+> [!NOTE]
+> You must run this for each new database.
