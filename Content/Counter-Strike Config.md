@@ -6,12 +6,11 @@ tags:
   - game/cs
   - game
 ---
-
 ```
 developer 1;
 fps_override 1;
-fps_max 240;
-fps_modem 240;
+fps_max 100;
+fps_modem 100;
 hud_fastswitch 1;
 _cl_autowepswitch 0;
 zoom_sensitivity_ratio 1;
