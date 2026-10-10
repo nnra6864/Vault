@@ -7,30 +7,40 @@ tags:
   - game
 ---
 ```
-developer 1;
+developer 0;
+gl_vsync 0;
 fps_override 1;
 fps_max 100;
 fps_modem 100;
+cl_updaterate 100;
+cl_cmdrate 100;
+ex_interp 0;
+rate 100000;
+
 hud_fastswitch 1;
 _cl_autowepswitch 0;
-zoom_sensitivity_ratio 1;
-gunsmoke 1;
+
 cl_weather 2;
-fastsprites 0;
 cl_himodels 1;
-max_shells 999;
-max_smokepuffs 999;
+cl_shadows 1;
+fastsprites 0;
+gunsmoke 1;
+max_shells 120;
+max_smokepuffs 120;
+gl_spriteblend 1;
+r_detailtextures 1;
+r_decals 300;
+mp_decals 300;
+cl_corpsestay 1;
+gl_picmip 0;
 con_color "255 255 255";
-rate 100000;
-cl_updaterate 102;
-cl_cmdrate 105;
-ex_interp 0.03;
+
+zoom_sensitivity_ratio 1;
 bind mwheelup +jump;
 bind mwheeldown +duck;
 bind x "say /lm";
 bind v plant_mine;
 bind c take_mine;
-mp_consistency 0;
 ```
 
 # CSLDR
