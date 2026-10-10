@@ -9,7 +9,7 @@ tags:
 
 My own server, mostly hosted for fun
 ```
-188.2.230.201:27015
+nnstdios.com
 ```
 
 Check out the [[Podman]] [container](https://github.com/nnra6864/CS_1.6_Podman) I made 😏
