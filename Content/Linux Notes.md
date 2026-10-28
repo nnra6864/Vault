@@ -6,7 +6,6 @@ tags:
   - tip
   - config
 ---
-
 ## Allow apps to use as much memory as needed
 
 `sudo nvim /etc/security/limits.conf`
@@ -99,3 +98,11 @@ kernel.pid_max=65535
 
 > [!NOTE]
 > All the binds can be found in [fish docs](https://fishshell.com/docs/current/interactive.html#shared-bindings).
+
+## Enable SMART Monitoring
+
+This can notify you of a failing drive.
+```sh
+sudo pacman -S smartmontools
+sudo systemctl enable --now smartd
+```
