@@ -14,6 +14,7 @@ This is usually caused by rootless [[Podman]] [[Networking]] being a mess.
 It sometimes starts before your network, or tries to copy your system [[DNS]] config which usually points to a local [[IP Address]] the container can't reach.
 
 ## Fix
+
 1. Ensure containers are not started before the network.
 	1. Edit the restart service:
 	   ```sh
