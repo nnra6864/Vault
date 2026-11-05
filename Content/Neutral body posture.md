@@ -7,8 +7,8 @@ aliases:
 ---
 This is the posture a human body defaults to when when in 0 gravity.
 
-[[Neutral_body_posture_1.jxl]]
+![[../Assets/Neutral_body_posture_1.jxl]]
 
 It slightly differs between people, as can be seen below.
 
-[[Neutral_body_posture_2.jxl]]
+![[../Assets/Neutral_body_posture_2.jxl]]
