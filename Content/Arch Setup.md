@@ -171,10 +171,7 @@ It's great if no other repo has the bin version of the package you need.
 	sudoedit /etc/hosts
 	```
 	```
-	192.168.0.10 nnstdios.xyz
-	192.168.0.10 git.nnstdios.xyz
-	192.168.0.10 nnra.nnstdios.xyz
-	192.168.0.10 chat.nnstdios.xyz
+	192.168.0.10 netbird.nnstdios.xyz
 	```
 10. Assign a static ip to the mac address in router settings(e.g. 192.168.0.20)
 11. Fix dolphin missing apps in the Open With menu ([Source](https://discuss.kde.org/t/dolphin-doesnt-show-a-single-app-in-the-open-with-menu/14799/11))
@@ -182,7 +179,17 @@ It's great if no other repo has the bin version of the package you need.
     sudo ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
     ```
 
-## Nvidia
+## Hardening
 
-In case you have an [[Nvidia]] [[GPU]], you might be able to squeeze out some extra performance.
-Check out [[Increase Default Power Limit for Nvidia GPUs]].
+You may want to harden your system - [[Hardening Linux]].
+
+## Disable automatic microphone gain
+
+Modern apps are annoying and like to tweak system settings.
+One such example is apps changing the gain of your microphone.
+Thankfully, there's an easy solution - [[Block Automatic Gain Control]].
+
+## Overclock
+
+If you are on a desktop, you should try overclocking your [[GPU]].
+It takes less than 5 minutes, and you can follow [[Overclocking GPU]].

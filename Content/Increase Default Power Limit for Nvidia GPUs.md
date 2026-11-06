@@ -9,6 +9,10 @@ tags:
   - nvidia
 aliases:
 ---
+
+> [!WARN]
+> This is now outdated, please refer to [[Overclocking GPU]]
+
 You can squeeze a bit of extra performance out of your [[Nvidia]] [[GPU]] by increasing its default power limit to the maximum value.
 To get this value, run:
 
